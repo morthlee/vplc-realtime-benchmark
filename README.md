@@ -8,7 +8,7 @@ This repository provides kernel configurations, container configurations, and ra
 
 ```
 vplc-realtime-benchmark/
-├── platform1/                          # ARM64 (NXP i.MX8M Plus)
+├── platform1/                          # ARM64 (PhytiumPi E2000Q)
 │   ├── Kernel Configurations/
 │   │   ├── cmdline.txt                 # Kernel boot parameters
 │   │   └── config.gz                   # PREEMPT_RT kernel config
@@ -44,8 +44,8 @@ vplc-realtime-benchmark/
 
 | Platform | Architecture | CPU | Memory | Kernel |
 |----------|-------------|-----|--------|--------|
-| Platform 1 | ARM64 | Phytium E2000Q (4-core FTC664) | 16 GB DDR4 | 6.6.63-rt46 |
-| Platform 2 | x86_64 | Intel Core i5-12400 (6-core) | 32 GB DDR4 | 6.16.3-rt3 |
+| Platform 1 | ARM64 | Phytium E2000Q (2×FTC664+2×FTC310) | 4 GB DDR4 | 6.6.63-rt46 |
+| Platform 2 | x86_64 | Intel Core i5-12400 (6-core) | 8 GB DDR4 | 6.16.3-rt3 |
 | Platform 3 | RISC-V | StarFive JH7110 (4-core U74) | 8 GB LPDDR4 | 6.12.5-rt |
 
 ## Kernel Configuration
@@ -178,11 +178,12 @@ tshark -r capture.pcapng -T fields -e frame.time_delta_displayed | \
 During measurements, stress-ng was executed with the following parameters:
 
 ```bash
-stress-ng --cpu 4 --cpu-method matrixprod \
-          --vm 2 --vm-bytes 256M \
+stress-ng --cpu 1 --cpu-load 100 --matrix 4 \
+          --vm 2 \
+          --hdd 2 \
+          --iomix 2 \
           --cache 2 \
-          --taskset 0,1,4-7 \
-          --timeout 1h
+          ----matrix-3d 4
 ```
 
 - Real-time threads (vECAT): Isolated cores (e.g., cores 2-3)
