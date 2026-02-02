@@ -1,0 +1,12 @@
+# Ignore large measurement log files
+*.pcapng
+*.pcap
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~

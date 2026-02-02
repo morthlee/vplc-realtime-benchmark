@@ -1,0 +1,1 @@
+console=ttyAMA1,115200 earlycon=pl011,0x2800d000 root=/dev/mmcblk0p1 rootfstype=ext4 rootwait rw cma=256m isolcpus=managed_irq,domain,1-3 kthread_cpus=0 rcu_nocb_poll nohz_full=1-3 rcu_nocbs=1-3 irqaffinity=0 nosoftlockup
