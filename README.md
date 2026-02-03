@@ -232,23 +232,7 @@ If you use these artifacts in your research, please cite:
   note={Under Review}
 }
 ```
-
-## Related Work
-
-The motion control workload used in experiments is based on:
-
-```bibtex
-@article{zhou2022hybrid,
-  author={Zhou, Nan and Li, Di},
-  journal={IEEE Transactions on Industrial Informatics},
-  title={Hybrid Synchronous–Asynchronous Execution of Reconfigurable PLC Programs in Edge Computing},
-  year={2022},
-  volume={18},
-  number={3},
-  pages={1663-1673},
-  doi={10.1109/TII.2021.3092741}
-}
-```
+ 
 
 ## License
 
