@@ -225,7 +225,7 @@ If you use these artifacts in your research, please cite:
 
 ```bibtex
 @article{vecat2025,
-  title={Optimization and Evaluation of Container-based EtherCAT Communication in Virtualized PLCs},
+  title={Optimization and Evaluation of Container-based EtherCAT Communication in Virtual PLCs},
   author={Nan Zhou, Yingfei Yao, Xiaojun Liang, Shunchun Yao, Chunhua Yang, and Weihua Gui},
   journal={IEEE Transactions on Industrial Electronics},
   year={2026},
