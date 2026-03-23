@@ -1,6 +1,6 @@
 # vPLC Real-Time Benchmark
 
-Reproducibility artifacts for the paper: **"Optimization and Evaluation of Container-based EtherCAT Communication in Virtualized PLCs"** submitted to IEEE Transactions on Industrial Electronics.
+Reproducibility artifacts for the paper: **"Optimization and Evaluation of Container-based EtherCAT Communication in Virtual PLCs"** published in IEEE Transactions on Industrial Electronics.
 
 This repository provides kernel configurations, container configurations, and raw measurement logs to enable reproduction of the experimental results presented in the paper.
 
